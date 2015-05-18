@@ -50,7 +50,7 @@ RUN sed -i "s/;date.timezone =.*/date.timezone = UTC/" /etc/php5/fpm/php.ini && 
 ADD docker/start.sh /opt/bin/start.sh
 RUN chmod u=rwx /opt/bin/start.sh
 
-RUN mkdir -p /www/public
+RUN mkdir -p /www/{public,nginx_logs}
 ADD . /www
 
 # PORTS
